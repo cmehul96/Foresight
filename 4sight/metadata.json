@@ -1,0 +1,6 @@
+{
+  "name": "Foresight - AI Research Partner",
+  "description": "An AI-powered application to assist with user research, from company background analysis to report generation.",
+  "requestFramePermissions": ["microphone"],
+  "prompt": ""
+}

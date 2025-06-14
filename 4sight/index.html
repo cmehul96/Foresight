@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foresight - AI Research Partner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <!-- Add Babel Standalone -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': 'var(--md-sys-color-primary)',
+            'on-primary': 'var(--md-sys-color-on-primary)',
+            'primary-container': 'var(--md-sys-color-primary-container)',
+            'on-primary-container': 'var(--md-sys-color-on-primary-container)',
+            'secondary': 'var(--md-sys-color-secondary)',
+            'on-secondary': 'var(--md-sys-color-on-secondary)',
+            'secondary-container': 'var(--md-sys-color-secondary-container)',
+            'on-secondary-container': 'var(--md-sys-color-on-secondary-container)',
+            'tertiary': 'var(--md-sys-color-tertiary)',
+            'on-tertiary': 'var(--md-sys-color-on-tertiary)',
+            'tertiary-container': 'var(--md-sys-color-tertiary-container)',
+            'on-tertiary-container': 'var(--md-sys-color-on-tertiary-container)',
+            'error': 'var(--md-sys-color-error)',
+            'on-error': 'var(--md-sys-color-on-error)',
+            'error-container': 'var(--md-sys-color-error-container)',
+            'on-error-container': 'var(--md-sys-color-on-error-container)',
+            'background': 'var(--md-sys-color-background)',
+            'on-background': 'var(--md-sys-color-on-background)',
+            'surface': 'var(--md-sys-color-surface)',
+            'on-surface': 'var(--md-sys-color-on-surface)',
+            'surface-variant': 'var(--md-sys-color-surface-variant)',
+            'on-surface-variant': 'var(--md-sys-color-on-surface-variant)',
+            'outline': 'var(--md-sys-color-outline)',
+            'outline-variant': 'var(--md-sys-color-outline-variant)',
+            'shadow': 'var(--md-sys-color-shadow)',
+            'scrim': 'var(--md-sys-color-scrim)',
+            'inverse-surface': 'var(--md-sys-color-inverse-surface)',
+            'inverse-on-surface': 'var(--md-sys-color-inverse-on-surface)',
+            'inverse-primary': 'var(--md-sys-color-inverse-primary)',
+            'surface-dim': 'var(--md-sys-color-surface-dim)',
+            'surface-bright': 'var(--md-sys-color-surface-bright)',
+            'surface-container-lowest': 'var(--md-sys-color-surface-container-lowest)',
+            'surface-container-low': 'var(--md-sys-color-surface-container-low)',
+            'surface-container': 'var(--md-sys-color-surface-container)',
+            'surface-container-high': 'var(--md-sys-color-surface-container-high)',
+            'surface-container-highest': 'var(--md-sys-color-surface-container-highest)',
+          },
+          animation: {
+            'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          borderRadius: {
+            'xl': '0.75rem', // 12px
+            '2xl': '1rem',    // 16px
+            '3xl': '1.5rem',  // 24px
+            '4xl': '2rem',    // 32px
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      :root {
+        /* Material Design 3 - Dark Expressive Theme */
+        --md-sys-color-primary: #C1C1FF;
+        --md-sys-color-on-primary: #27286C;
+        --md-sys-color-primary-container: #3E3F83;
+        --md-sys-color-on-primary-container: #E0E0FF;
+        --md-sys-color-secondary: #C8C3DC;
+        --md-sys-color-on-secondary: #312E41;
+        --md-sys-color-secondary-container: #484459;
+        --md-sys-color-on-secondary-container: #E4DFF8;
+        --md-sys-color-tertiary: #E7B9D6;
+        --md-sys-color-on-tertiary: #46263C;
+        --md-sys-color-tertiary-container: #5F3C53;
+        --md-sys-color-on-tertiary-container: #FFD8EE;
+        --md-sys-color-error: #FFB4AB;
+        --md-sys-color-on-error: #690005;
+        --md-sys-color-error-container: #93000A;
+        --md-sys-color-on-error-container: #FFB4AB;
+        --md-sys-color-background: #141318;
+        --md-sys-color-on-background: #E6E1E9;
+        --md-sys-color-surface: #141318;
+        --md-sys-color-on-surface: #E6E1E9;
+        --md-sys-color-surface-variant: #49454F;
+        --md-sys-color-on-surface-variant: #CAC4D0;
+        --md-sys-color-outline: #938F99;
+        --md-sys-color-outline-variant: #49454F;
+        --md-sys-color-shadow: #000000;
+        --md-sys-color-scrim: #000000;
+        --md-sys-color-inverse-surface: #E6E1E9;
+        --md-sys-color-inverse-on-surface: #313036;
+        --md-sys-color-inverse-primary: #55579C;
+        --md-sys-color-surface-dim: #141318;
+        --md-sys-color-surface-bright: #3B383E;
+        --md-sys-color-surface-container-lowest: #0F0D13;
+        --md-sys-color-surface-container-low: #1C1B20;
+        --md-sys-color-surface-container: #211F24;
+        --md-sys-color-surface-container-high: #2B2A2F;
+        --md-sys-color-surface-container-highest: #36343A;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        @apply bg-background text-on-background antialiased;
+      }
+      /* Custom Scrollbar Styles */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        @apply bg-surface-container-low;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        @apply bg-primary-container;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        @apply bg-primary;
+      }
+       /* Material Symbols Outlined default style */
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0, /* 0 for outlined, 1 for filled */
+        'wght' 400, /* Weight, 100-700 */
+        'GRAD' 0, /* Grade, -50 to 200 */
+        'opsz' 24; /* Optical size, 20-48 */
+        vertical-align: middle; /* Better alignment with text */
+      }
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.1.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.1.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@19.1.0/jsx-runtime",
+    "react/jsx-dev-runtime": "https://esm.sh/react@19.1.0/jsx-dev-runtime",
+    "@google/genai": "https://esm.sh/@google/genai@1.4.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
